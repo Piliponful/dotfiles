@@ -6,3 +6,4 @@ git clone https://github.com/zsh-users/antigen.git ~
 source ~/.zshrc
 zsh -i -c "nvm install 10.0.0"
 echo 'bash -c  $(wget -qO- https://git.io/vQgMr)'
+sudo apt install xclip
