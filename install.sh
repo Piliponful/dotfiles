@@ -7,3 +7,4 @@ source ~/.zshrc
 zsh -i -c "nvm install 10.0.0"
 echo 'bash -c  $(wget -qO- https://git.io/vQgMr)'
 sudo apt install xclip
+sudo apt install fonts-firacode
