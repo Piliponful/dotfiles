@@ -1,0 +1,14 @@
+[user]
+	name = Piliponful
+	email = piliponful@gmail.com
+[core]
+	editor = vim
+[alias]
+	a = add --all
+	b = branch
+	c = commit
+	cd = commit --amend
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+	o = checkout
+

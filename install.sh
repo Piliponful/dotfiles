@@ -1,13 +1,15 @@
-sudo apt update
-sudo apt install xclip
-sudo apt install fonts-firacode
-sudo apt install tmux
-sudo apt install zsh
-sudo apt install git
+sudo apt -y update
+sudo apt -y install xclip
+sudo apt -y install fonts-firacode
+sudo apt -y install tmux
+sudo apt -y install zsh
+sudo apt -y install git
 
-mv ~/dotfiles/.zshrc ~/.zshrc
+git clone https://github.com/Piliponful/dotfiles.git ~/dotfiles
 
-git clone https://github.com/zsh-users/antigen.git ~/
+mv ~/dotfiles/.* ~/
+
+git clone https://github.com/zsh-users/antigen.git ~/antigen
 
 chsh -s zsh
 source ~/.zshrc
