@@ -7,7 +7,9 @@ sudo apt -y install git
 
 git clone https://github.com/Piliponful/dotfiles.git ~/dotfiles
 
-mv ~/dotfiles/.* ~/
+cp ~/dotfiles/.zshrc ~/
+cp ~/dotfiles/.gitconfig ~/
+cp ~/dotfiles/.vimrc ~/
 
 git clone https://github.com/zsh-users/antigen.git ~/antigen
 
