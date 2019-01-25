@@ -2,9 +2,12 @@ sudo apt -y update
 sudo apt -y install xclip
 sudo apt -y install fonts-firacode
 sudo apt -y install tmux
+sudo apt -y install vim
 sudo apt -y install zsh
 sudo apt -y install git
 sudo apt -y install curl
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install vs code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
