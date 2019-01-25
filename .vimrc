@@ -15,6 +15,12 @@ Plugin 'leshill/vim-json'
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'junegunn/fzf.vim'
+Plugin 'w0rp/ale'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'junegunn/fzf'
+
 
 call vundle#end()
 filetype plugin indent on

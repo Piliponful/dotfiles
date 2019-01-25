@@ -6,6 +6,8 @@ sudo apt -y install vim
 sudo apt -y install zsh
 sudo apt -y install git
 sudo apt -y install curl
+sudo apt -y install editorconfig
+sudo apt -y install build-essential cmake python3-dev
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -24,6 +26,10 @@ cp ~/dotfiles/.tmux.conf ~/
 
 git clone https://github.com/zsh-users/antigen.git ~/antigen
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
+
+cd ~/.vim/bundle/YouCompleteMe
 
 chsh -s zsh
 
