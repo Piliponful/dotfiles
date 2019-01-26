@@ -15,11 +15,17 @@ Plugin 'leshill/vim-json'
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'junegunn/fzf'
+Plugin 'tpope/vim-surround'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/gv.vim'
+Plugin 'airblade/vim-gitgutter'
 
 
 call vundle#end()
@@ -35,6 +41,7 @@ endif
 set shiftwidth=2
 set expandtab ts=2 sw=2 ai
 set listchars=space:· list
+set number
 
 set laststatus=2
 
