@@ -29,4 +29,5 @@ then
     tmux attach -t TMUX || tmux new -s TMUX
 fi
 
+setopt extendedglob
 

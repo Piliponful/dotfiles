@@ -26,6 +26,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/gv.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-obsession'
 
 
 call vundle#end()
@@ -53,3 +55,13 @@ syntax on
 colorscheme onedark
 
 set pastetoggle=<F3>
+map <C-n> :NERDTreeToggle<CR>
+let hlstate=0
+nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+nnoremap <c-p> :Files<CR>
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
