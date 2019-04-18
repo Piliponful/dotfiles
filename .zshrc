@@ -1,4 +1,4 @@
-source ~/antigen/antigen.zsh
+source antigen/antigen.zsh
 
 # Load the theme
 antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship

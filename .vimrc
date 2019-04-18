@@ -39,6 +39,10 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+"Encoding
+scriptencoding utf-8
+set encoding=utf-8
+
 "Indent settings
 set shiftwidth=2
 set expandtab ts=2 sw=2 ai
