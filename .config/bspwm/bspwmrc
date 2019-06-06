@@ -22,5 +22,5 @@ bspc config presel_feedback_color '#7b7bbc'
 sxhkd &
 dunst &
 MONITOR=eDP1 polybar top &
-feh --bg-center ~/pictures/ace-wallpaper.png
+feh --bg-center ~/ace-wallpaper.png
 compton --config $HOME/.config/compton/compton.conf -b
