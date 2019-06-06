@@ -4,6 +4,7 @@ export HISTSIZE=50000
 export SAVEHIST=50000
 export NVM_LAZY_LOAD=true
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
+export PATH=$HOME/scripts:$PATH
 
 autoload -U promptinit; promptinit
 prompt pure
