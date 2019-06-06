@@ -1,0 +1,144 @@
+[global/wm]
+margin-bottom = -8 
+margin-top = 0
+
+[colors]
+bg = #00282a36
+fg = #f9f9f9
+
+[bar/top]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 50
+dpi = 210
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+spacing = 4
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
+
+line-size = 3
+
+;tray-position = right
+;tray-background = ${colors.bg}
+;tray-maxsize = 33
+
+wm-restack = bspwm
+
+font-0 = Lato:size=9
+font-1 = FuraCodeNerdFont:size=10
+
+modules-left = bspwm
+modules-center = date
+modules-right = wireless-network backlight volume battery
+
+[module/backlight]
+type = internal/xbacklight
+format = <label>
+label = %{F#ff8faa} %{F-}  %percentage%%
+
+[module/battery]
+type = internal/battery
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #ff8e91
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffac8d
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = #ffcb8d
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = #97d28b
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = #92b3ea
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+animation-charging-foreground = #ff8faa
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = code;
+ws-icon-3 = design;
+ws-icon-4 = music;
+ws-icon-5 = chrome;
+ws-icon-default = 
+
+pin-workspaces = true
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-underline = #4a4e64
+label-focused-font = 3
+label-focused-padding = 5
+
+label-occupied = %icon%
+label-occupied-foreground = #f9f9f9
+label-occupied-underline = #63f9f9f9
+label-occupied-font = 3
+label-occupied-padding = 5
+
+label-urgent = %icon%
+label-urgent-underline = #ff8e91
+label-urgent-font = 3
+label-urgent-padding = 5
+
+label-empty = %icon%
+label-empty-foreground = #63f9f9f9
+label-empty-font = 3
+label-empty-padding = 5
+
+[module/date]
+type = internal/date
+date = %%{F#f9f9f9}%Y-%m-%d%%{F-}  %%{F#f9f9f9}%H:%M%%{F-}
+
+[module/wireless-network]
+type = internal/network
+interface = wlan0 
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid% (%upspeed% . %downspeed%)
+label-disconnected = %{F#ff8e91}睊%{F-}   %{F#63f9f9f9}Not connected%{F-}
+
+ramp-signal-0 = 
+ramp-signal-0-foreground = #ff8e91
+ramp-signal-1 = 
+ramp-signal-1-foreground = #ffac8d
+ramp-signal-2 = 
+ramp-signal-2-foreground = #ffcb8d
+ramp-signal-3 = 
+ramp-signal-3-foreground = #97d28b
+ramp-signal-4 = 
+ramp-signal-4-foreground = #92b3ea
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-muted = %{F#ff8e91}ﱝ %{F-}  %{F#63f9f9f9}muted%{F-}
+
+ramp-volume-0 = 奄
+ramp-volume-0-foreground = #ff8e91
+ramp-volume-1 = 奔
+ramp-volume-1-foreground = #ffac8d
+ramp-volume-2 = 墳
+ramp-volume-2-foreground = #ffcb8d
+ramp-volume-3 = 墳
+ramp-volume-3-foreground = #92b3ea
+
