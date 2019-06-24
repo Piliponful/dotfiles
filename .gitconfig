@@ -1,9 +1,12 @@
 [user]
-  name = Piliponful
+	name = piliponful
   email = piliponful@gmail.com
 [core]
   editor = vim
+	excludesfile = /home/piliponful-work/.gitignore
 [alias]
+  d = diff
+  s = status
   ac = !git add . && git commit -am
   a = add --all
   b = branch
