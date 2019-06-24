@@ -4,7 +4,7 @@ export SAVEHIST=50000
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
 export PATH=$HOME/scripts:$PATH
 
-source ~/antigen/antigen.zsh
+source ~/antigen.zsh
 
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
@@ -22,6 +22,8 @@ bindkey '^[[B' history-substring-search-down
 setopt appendhistory
 setopt extendedglob
 setopt vi
+setopt inc_append_history
+setopt share_history
 
 alias ls='ls --color=auto'
 
