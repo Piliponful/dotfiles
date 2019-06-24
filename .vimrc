@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
-Plugin 'leshill/vim-json'
 Plugin 'mxw/vim-jsx'
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
@@ -42,6 +41,7 @@ set laststatus=2
 set pastetoggle=<F3>
 set rnu
 set encoding=UTF-8
+set clipboard=unnamedplus
 
 map <C-n> :NERDTreeToggle<CR>
 map <c-f> :Ag<CR>
