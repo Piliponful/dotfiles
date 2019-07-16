@@ -11,6 +11,8 @@
   a = add --all
   b = branch
   c = commit
+  ch = checkout
+  chr = cherry-pick
   cd = commit --amend
   l = log --oneline
   lg = log --oneline --graph --decorate
