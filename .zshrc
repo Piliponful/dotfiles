@@ -26,6 +26,7 @@ setopt inc_append_history
 setopt share_history
 
 alias ls='ls --color=auto'
+alias g=git
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx

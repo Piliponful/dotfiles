@@ -1,10 +1,12 @@
 [user]
-	name = piliponful
+  name = piliponful
   email = piliponful@gmail.com
 [core]
   editor = vim
-	excludesfile = /home/piliponful-work/.gitignore
+  excludesfile = ~/.gitignore-global
 [alias]
+  ps = push
+  pl = pull
   d = diff
   s = status
   ac = !git add . && git commit -am
