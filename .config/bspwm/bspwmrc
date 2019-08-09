@@ -1,23 +1,22 @@
 #! /bin/sh
 
-bspc monitor -d projects fun
-
-bspc config border_width        1
+bspc config border_width        8
 bspc config window_gap          20
-bspc config top_padding         0
-bspc config left_padding        5
-bspc config right_padding       5
-bspc config bottom_padding      5
+bspc config top_padding         8
+bspc config left_padding        8
+bspc config right_padding       8
+bspc config bottom_padding      8
 
 bspc config split_ratio             0.50
-bspc config ignore_ewmh_focus       true 
+bspc config ignore_ewmh_focus       true
 
-bspc config remove_disabled_monitors true 
+bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
 bspc config normal_border_color '#282a36'
 bspc config focused_border_color '#527fc1'
 bspc config presel_feedback_color '#7b7bbc'
+bspc config borderless_monocle true
 
 sxhkd &
 dunst &
