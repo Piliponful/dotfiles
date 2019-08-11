@@ -1,39 +1,66 @@
-[global/wm]
-;margin-bottom = -8 
-;margin-top = 0
-
 [colors]
 bg = #00282a36
-fg = #f9f9f9
 
 [bar/top]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 50
 dpi = 210
-
+offset-y = 8
 background = ${colors.bg}
-foreground = ${colors.fg}
+module-margin = 1
+font-0 = FuraCodeNerdFont:size=10
+modules-center = date wireless-network backlight volume battery
 
-spacing = 4
-padding-right = 5
-padding-left = 5
-module-margin-left = 2
-module-margin-right = 2
-
-line-size = 3
-
+; it will allow for fullscreen mode without bar being on top of the window
 wm-restack = bspwm
 
-font-0 = FuraCodeNerdFont:size=10
+[module/date]
+type = internal/date
+interval = 1.0
+label = %time%
+time = %H:%M
+format = %{F#ffb85b}%{F-} <label>
 
-modules-left = date
-modules-right = wireless-network backlight volume battery
+[module/wireless-network]
+type = internal/network
+interface = wlan0 
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid% (%upspeed% / %downspeed%)
+label-disconnected = %{F#ff8e91}睊%{F-}   %{F#63f9f9f9}Not connected%{F-}
+
+ramp-signal-0 = 
+ramp-signal-0-foreground = #ffe9cf
+ramp-signal-1 = 
+ramp-signal-1-foreground = #ffe2bf
+ramp-signal-2 = 
+ramp-signal-2-foreground = #ffd5a3
+ramp-signal-3 = 
+ramp-signal-3-foreground = #ffcb8d
+ramp-signal-4 = 
+ramp-signal-4-foreground = #ffb85b
 
 [module/backlight]
 type = internal/xbacklight
 format = <label>
-label = %{F#ff8faa} %{F-}  %percentage%%
+label = %{F#ffb85b} %{F-}%percentage%%
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+label-muted = %{F#ff8e91}ﱝ %{F-}  %{F#63f9f9f9}muted%{F-}
+
+ramp-volume-0 = 奄
+ramp-volume-0-foreground = #ffe2bf
+ramp-volume-1 = 奔
+ramp-volume-1-foreground = #ffd5a3
+ramp-volume-2 = 墳
+ramp-volume-2-foreground = #ffcb8d
+ramp-volume-3 = 墳
+ramp-volume-3-foreground = #ffb85b
 
 [module/battery]
 type = internal/battery
@@ -43,15 +70,15 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
 ramp-capacity-0 = 
-ramp-capacity-0-foreground = #ff8e91
+ramp-capacity-0-foreground = #ffe9cf
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = #ffac8d
+ramp-capacity-1-foreground = #ffe2bf
 ramp-capacity-2 = 
-ramp-capacity-2-foreground = #ffcb8d
+ramp-capacity-2-foreground = #ffd5a3
 ramp-capacity-3 = 
-ramp-capacity-3-foreground = #97d28b
+ramp-capacity-3-foreground = #ffcb8d
 ramp-capacity-4 = 
-ramp-capacity-4-foreground = #92b3ea
+ramp-capacity-4-foreground = #ffb85b
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -59,44 +86,4 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
-animation-charging-foreground = #ff8faa
-
-[module/date]
-type = internal/date
-date = %%{F#f9f9f9}%Y-%m-%d%%{F-}  %%{F#f9f9f9}%H:%M%%{F-}
-
-[module/wireless-network]
-type = internal/network
-interface = wlan0 
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid% (%upspeed% . %downspeed%)
-label-disconnected = %{F#ff8e91}睊%{F-}   %{F#63f9f9f9}Not connected%{F-}
-
-ramp-signal-0 = 
-ramp-signal-0-foreground = #ff8e91
-ramp-signal-1 = 
-ramp-signal-1-foreground = #ffac8d
-ramp-signal-2 = 
-ramp-signal-2-foreground = #ffcb8d
-ramp-signal-3 = 
-ramp-signal-3-foreground = #97d28b
-ramp-signal-4 = 
-ramp-signal-4-foreground = #92b3ea
-
-[module/volume]
-type = internal/pulseaudio
-
-format-volume = <ramp-volume> <label-volume>
-label-muted = %{F#ff8e91}ﱝ %{F-}  %{F#63f9f9f9}muted%{F-}
-
-ramp-volume-0 = 奄
-ramp-volume-0-foreground = #ff8e91
-ramp-volume-1 = 奔
-ramp-volume-1-foreground = #ffac8d
-ramp-volume-2 = 墳
-ramp-volume-2-foreground = #ffcb8d
-ramp-volume-3 = 墳
-ramp-volume-3-foreground = #92b3ea
-
+animation-charging-foreground = #ffb85b
