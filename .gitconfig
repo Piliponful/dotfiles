@@ -3,7 +3,6 @@
   email = piliponful@gmail.com
 [core]
   editor = vim
-  excludesfile = ~/.gitignore-global
 [alias]
   ps = push
   pl = pull
