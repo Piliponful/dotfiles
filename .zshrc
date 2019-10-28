@@ -8,9 +8,7 @@ source ~/antigen.zsh
 
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
-#antigen bundle chrissicool/zsh-256color
 antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
