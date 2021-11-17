@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = none
-    geometry = "700x1-28+78"
+    geometry = "400x1-28+78"
     indicate_hidden = yes
     transparency = 0
     separator_height = 0
