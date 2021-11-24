@@ -2,7 +2,7 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=50000
 export SAVEHIST=50000
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
-export PATH=$HOME/.config/rofi/bin:$HOME/scripts:$PATH
+export PATH=$HOME/.config/rofi/bin:$HOME/.local/bin:$HOME/.ghcup/bin:$HOME/scripts:$PATH
 
 source ~/antigen.zsh
 
