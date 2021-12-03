@@ -22,7 +22,7 @@ if xrandr --query | grep '\bconnected\b' | grep '^DP1' ; then
   MONITOR=DP1 polybar top &
   xrandr --output eDP1 --off --output DP1 --scale 1 --primary
 else
-  MONITOR=eDP1 polybar top -c ~/.config/polybar/config2 &
+  MONITOR=eDP1 polybar top &
   xrandr --output eDP1
 fi
 
