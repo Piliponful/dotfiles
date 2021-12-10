@@ -41,12 +41,6 @@ let g:coc_global_extensions = [
   \ 'coc-go'
   \ ]
 
-" for i in range(97,122)
-"   let c = nr2char(i)
-"   exec "map \e".c." <M-".c.">"
-"   exec "map! \e".c." <M-".c.">"
-" endfor
-
 map <C-n> :NERDTreeToggle<CR>
 map <A-f> :Rg<CR>
 map <c-p> :Files<CR>
@@ -85,15 +79,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
