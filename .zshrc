@@ -25,6 +25,7 @@ alias ls='ls --color=auto'
 alias g=git
 alias dc=docker-compose
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias db='mongosh "mongodb+srv://doadmin:694MT02OorB3a1b5@db-mongodb-fra1-13618-4344c537.mongo.ondigitalocean.com/defi?authSource=admin&replicaSet=db-mongodb-fra1-13618" --tls --tlsCAFile ./docs/ca-certificate.crt'
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx

@@ -7,7 +7,7 @@ super + @space
 
 # terminal emulator
 super + Return
-	urxvt
+	alacritty
 
 super + i
   source ~/scripts/hiber.sh
