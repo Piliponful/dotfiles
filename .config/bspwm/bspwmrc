@@ -29,4 +29,4 @@ fi
 sxhkd &
 dunst &
 feh --bg-center ~/ace-wallpaper.png
-compton --config $HOME/.config/compton/compton.conf -b
+picom --config $HOME/.config/compton/compton.conf -b

@@ -2,7 +2,7 @@
 # wm independent hotkeys
 #
 
-alt + space
+super + @space
   {setxkbmap ru, setxkbmap us}
 
 # terminal emulator
@@ -13,7 +13,7 @@ super + i
   source ~/scripts/hiber.sh
 
 # program launcher
-super + @space
+alt + @space
 	launcher_ribbon
 
 # make sxhkd reload its configuration files:
@@ -43,6 +43,9 @@ super + y
 # swap the current node and the biggest node
 super + g
 	bspc node -s biggest
+
+super + F11
+  scrot --select
 
 #
 # state/flags
